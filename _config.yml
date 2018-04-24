@@ -1,3 +1,5 @@
 theme: jekyll-theme-cayman
 title: Math Notes
 url: https://cossio.github.io
+plugins:
+  - jekyll-seo-tag
