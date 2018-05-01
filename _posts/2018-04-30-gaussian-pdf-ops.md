@@ -63,7 +63,7 @@ TODO: Quotient of multivariate Gaussians.
 
 There are many derivations of these equations in the web. Here are some that I have found.
 
-1. http://www.tina-vision.net/docs/memos/2003-003.pdf
-2. http://www.gatsby.ucl.ac.uk/~turner/workshop/EPpapers/Minka%202007%20Quick%20EP%20reference.pdf
-3. http://davmre.github.io/blog/statistics/2015/03/27/gaussian_quotient
+1. http://www.tina-vision.net/docs/memos/2003-003.pdf (product of $n$ PDFs)
+2. http://www.gatsby.ucl.ac.uk/~turner/workshop/EPpapers/Minka%202007%20Quick%20EP%20reference.pdf (multivariate quotient for EP)
+3. http://davmre.github.io/blog/statistics/2015/03/27/gaussian_quotient (multivariate quotient)
 4. https://cs.nyu.edu/~roweis/notes/gaussid.pdf
