@@ -7,9 +7,9 @@ comments: true
 
 ## Problem statement
 
-Let $f:X \times Y \rightarrow \mathbb R$ be a saddle-function (convex in $x$, concave in $y$). Here $X \subset \mathbb R^n, Y \subset \mathbb R^m$ are convex sets. Consider the following constrained optimization problem:
+Let $f:X\times Y\rightarrow\mathbb R$ be a saddle-function, convex in $x$ and concave in $y$. Here $X\subset\mathbb R^n, Y\subset\mathbb R^m$ are convex sets. Consider the following constrained optimization problem:
 
-$$\min_x \max_y f(x,y)$$
+$$\min_x\max_y f(x,y)$$
 
 subject to
 
