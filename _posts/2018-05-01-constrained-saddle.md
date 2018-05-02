@@ -7,7 +7,7 @@ comments: true
 
 ## Problem statement
 
-Let $f:X\times Y\rightarrow\mathbb R$ be a saddle-function \(convex in $x$ and concave in $y$\). Here $X\subset\mathbb R^n, Y\subset\mathbb R^m$ are convex sets. Consider the following constrained optimization problem:
+Let $f:X\times Y\rightarrow\mathbb R$ be a saddle-function (convex in $x$ and concave in $y$). Here $X\subset\mathbb R^n, Y\subset\mathbb R^m$ are convex sets. Consider the following constrained optimization problem:
 
 $$\min_x\max_y f(x,y)$$
 
@@ -17,7 +17,7 @@ $$g_i(x,y) \le 0,\quad i = 1,\dots,r$$
 
 where the functions $g_i:X\times Y \rightarrow\mathbb R$ are convex in both arguments $x,y$. 
 
-Furthermore, we assume the following regularity conditions: That the functions $f$ and $g_i$, $i=1,\dots,r$ are differentiable in all arguments, and that the sets $X,Y$ are compact \(then $X\times Y$ is also convex and compact\).
+Furthermore, we assume the following regularity conditions: That the functions $f$ and $g_i$, $i=1,\dots,r$ are differentiable in all arguments, and that the sets $X,Y$ are compact (then $X\times Y$ is also convex and compact).
 
 Let us define the sets
 
