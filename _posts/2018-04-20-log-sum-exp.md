@@ -23,7 +23,7 @@ $$
     \qquad (k\ne l)
 $$
 
-To show that the Hessian is positive-definite, evaluate the quadratic form for an arbitrary vector $\mathbf{v}$. Denoting $z_i = \mathrm e^{x_i}$, we have
+To show that the Hessian is positive-definite, evaluate the corresponding quadratic form for an arbitrary vector $\mathbf{v}$. Denoting $z_i = \mathrm e^{x_i}$, we have
 
 $$\begin{aligned}
 \sum_{kl}\frac{\partial f^2}{\partial x_k \partial x_l}v_k v_l

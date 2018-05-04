@@ -1,2 +1,25 @@
 {
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/*.html": true
+    },
+    
+    "cSpell.enabled": false,
+    "editor.fontSize": 14,
+    "markdown.preview.scrollEditorWithPreview": true,
+    "markdown.preview.scrollPreviewWithEditor": true,
+    //"editor.wordWrap": "on",
+
+    "[markdown]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": false
+    },
+
+    "markdown.preview.fontSize": 16,
+
+    "editor.minimap.enabled": false
 }
