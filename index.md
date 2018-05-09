@@ -13,7 +13,6 @@ layout: home
   </ul>
 </div>
 
-
 <div id="posts">
   <h2>Blog Posts</h2>
   <ul>
