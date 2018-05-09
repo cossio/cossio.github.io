@@ -1,7 +1,6 @@
 ---
 layout: home
 ---
-# About
 
 This blog contains random personal study notes.
 
