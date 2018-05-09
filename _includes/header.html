@@ -5,9 +5,7 @@
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     <a class="site-title" rel="author" href="{{ "/" | relative_url }}">Home</a>
     <a class="site-title" rel="author" href="https://github.com/cossio/cossio.github.io">Github</a>
-    <!--
-    <a class="site-title" rel="author" href="{{% link _pages/about.md %}}">About</a>
-    -->
+    <a class="site-title" rel="author" href="{{% link about.md %}}">About</a>
 
     {%- if page_paths -%}
       <nav class="site-nav">
