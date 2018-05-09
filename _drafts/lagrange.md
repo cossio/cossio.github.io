@@ -1,0 +1,86 @@
+---
+layout: post
+title: Lagrangian duality
+comments: true
+---
+# Lagrangian duality
+
+## Minimization problems
+
+Let $f,g_i,h_j$ be functions $X\rightarrow\mathbb R$, where $X\subset\mathbb R^n$. Consider the constrained minimization problem
+
+$$f^* = \min_{x\in\Omega} f(x)$$
+
+where $\Omega$ is the set of points $x\in X$ satisfying the constrains
+
+$$g_i(x)\le0,\quad i=1,\dots,p$$
+$$h_j(x)=0,  \quad i=1,\dots,q$$
+
+Define the Lagrangian $L$ and the Lagrangian dual function $G$,
+
+$$L(x,\lambda,\nu) = f(x) + \sum_i\lambda_i g_i(x) + \sum_j\nu_jh_j(x)$$
+$$G(\lambda,\nu) = \min_{x\in X} L(x,\lambda,\nu)$$
+
+If $\lambda_i\ge0$ for all $i$ and $x\in\Omega$, then $L(x,\lambda,\nu)\le f(x)$, because $g_i(x)\le0$ for all $i$ and $h_j(x)=0$ for all $j$. Since this inequality holds for all $x\in\Omega$, it follows that
+
+$$G(\lambda,\nu) \le \min_{x\in\Omega} f(x)$$
+
+for all $\lambda\ge0,\nu$. We assume that strong duality holds. Then,
+
+$$\max_{\lambda\ge0}\max_\nu G(\lambda,\nu) = \min_{x\in\Omega}f(x)$$
+
+Substituting the definition of $G$,
+
+$$\min_{x\in\Omega}f(x) = \max_{\lambda\ge0}\max_\nu\min_{x\in X}L(x,\lambda,\nu)$$
+
+### Saddle-point
+
+We can optimize $L$ w.r.t. $\lambda\ge0,\nu$ with fixed $x$, with the result
+
+$$\max_{\lambda \ge 0}\max_\nu L(x,\lambda,\nu) =
+\begin{cases}
+  f(x)      & x\in\Omega \\
+  \infty    & x\notin\Omega
+\end{cases}$$
+
+Therefore, minimizing w.r.t to $x$ yields a feasible point $x^*\in\Omega$. It follows that:
+
+$$\min_{x\in X}\max_{\lambda\ge0}\max_\nu L(x,\lambda,\nu) = \min_{x\in\Omega}f(x)$$
+
+Comparing with the equality derived above, it follows that $L$ satisfies the strong max-min property,
+
+$$\max_{\lambda\ge0}\max_\nu\min_{x\in X}L(x,\lambda,\nu)
+= \min_{x\in X}\max_{\lambda\ge0}\max_\nu L(x,\lambda,\nu)$$
+
+Provided $L$ (therefore $f$) satisfies certain regularity properties (smoothness and compact domain), this equality implies the existence of a saddle-point $(x^*,\lambda^*,\nu^*)$ satisfying
+
+$$L(x^*,\lambda,\nu) \le L(x^*,\lambda^*,\nu^*) \le L(x,\lambda^*,\nu^*)$$
+
+for all $x\in X,\lambda\ge0,\nu$. The saddle-point also gives the minimax value of $L$, therefore,
+
+$$f^* = L(x^*,\lambda^*,\nu^*)$$
+
+### Stationarity conditions
+
+Interior saddle-points are also critical. More precisely, suppose that $\epsilon>0$ exists such that $x'\in\Omega$ for all points $x'$ with $x'_j=x_j,j\ne i$ and $|x'_i - x_i^*| < \epsilon$. More precisely, there exists a segment within $\Omega$ containing $x^*$ in its interior in the direction of the $i$th axis. Then $L$ must be stationary to first-order w.r.t. $x_i$:
+
+$$\frac{\partial}{\partial x_j} L(x^*,\lambda^*,\nu^*)
+= \frac{\partial}{\partial x_j} f(x^*)
++ \sum_i\lambda_i^* \frac{\partial}{\partial x_j}g(x^*)
++ \sum_j\nu_j\frac{\partial}{\partial x_j}h_j^*(x^*) = 0$$
+
+If $\lambda_i>0$, then $L$ is critical w.r.t to $\lambda_i$ also, which implies that $g_i(x^*)=0$.
+
+Since $\nu$ is not constrained, we have
+
+$$\frac{\partial}{\partial\nu_j} L(x^*,\lambda^*,\nu^*) = h_j(x^*) = 0$$
+
+for all $j$, which reproduces the equality constrains.
+
+## Minimax problems
+
+
+
+## References
+
+1. Boyd, Stephen P., and Lieven Vandenberghe. Convex Optimization. Cambridge, UK ; New York: Cambridge University Press, 2004. Specially Chapter 5 on Lagrangian duality.

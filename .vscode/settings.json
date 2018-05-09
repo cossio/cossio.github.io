@@ -5,7 +5,8 @@
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
-        "**/*.html": true
+        "_posts/*.html": true,
+        "_pages/*.html": true
     },
     
     "cSpell.enabled": false,
@@ -18,6 +19,8 @@
         "editor.wordWrap": "on",
         "editor.quickSuggestions": false
     },
+
+    "markdown.extension.showExplorer": true,
 
     "markdown.preview.fontSize": 16,
 
