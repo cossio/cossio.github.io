@@ -49,7 +49,13 @@ The first two constrains are simply the conditions for $\hat p_i,q$ to be normal
 
 Let
 
-$$\mathcal L = \mathcal J(\hat p,q) + \sum_i \alpha_i \left(\sum_\mathbf x \hat p_i(\mathbf x) - 1\right) + \beta \left(\sum_\mathbf x \hat q(\mathbf x) - 1\right) + \sum_{ij} \lambda_{ij} \sum_\mathbf{x} (\hat p_i(\mathbf x) - q(\mathbf x))f_j(\mathbf x)$$
+$$\begin{aligned}
+\mathcal L(\hat p, q, \alpha, \beta, \lambda)
+&= \mathcal J(\hat p,q)
++\sum_i \alpha_i \left(\sum_\mathbf x \hat p_i(\mathbf x) - 1\right)
++\beta \left(\sum_\mathbf x \hat q(\mathbf x) - 1\right) \\
+&+\sum_{ij} \lambda_{ij} \sum_\mathbf{x} (\hat p_i(\mathbf x) - q(\mathbf x))f_j(\mathbf x)
+\end{aligned}$$
 
 Provided that $\hat p^*,q^* > 0$, we have that the distributions $\hat p^*,q^*$ solve the minimax problem stated above, if and only if there exist some numbers $\alpha_i,\beta,\lambda_{ij}$ such that $\hat p^*,q^*$ solve the equations
 
