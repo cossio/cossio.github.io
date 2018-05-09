@@ -1,24 +1,8 @@
 ---
 layout: home
 ---
+# About
 
-<!-- <div id="pages">
-  <h2>Pages</h2>
-  <ul>
-    {% for page in site.html_pages %}
-      {% if page.title %}
-        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-</div>
+This blog contains random personal study notes.
 
-<div id="posts">
-  <h2>Blog Posts</h2>
-  <ul>
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> - <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
- -->
+Comments are welcome. Specially if I am wrong about something.
