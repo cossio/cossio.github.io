@@ -30,6 +30,10 @@ Here we show that the problem is well posed. Let $x^\ast\in X,y^\ast\in Y$ be mi
 
 $$\min_{x\in X} f(x) = g(x^\ast),\qquad\min_{y\in Y} g(y) = g(y^\ast)$$
 
+Then
+
+$$\max_{y\in\Omega(x,\cdot)} (f(x) - g(y)) \le f(x) - g(y^\ast)$$
+
 ## Lagrangian formalism
 
 Define the Lagrangian,
