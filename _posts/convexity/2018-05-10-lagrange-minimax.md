@@ -3,7 +3,6 @@ layout: post
 title: Lagrangian formalism for minimax problems
 comments: true
 ---
-# Lagrangian formalism for minimax problems
 
 Let $f:X\times Y\rightarrow\mathbb R$ be a saddle-function (convex in $x$, concave in $y$), where $X\in\mathbb R^n$ and $Y\in\mathbb R^m$ are convex sets. We consider a restricted domain $\Omega \subset X\times Y$ defined by the constrains
 
@@ -26,7 +25,7 @@ In this note we investigate the minimax and maximin problems,
 $$f^{(1)} = \max_{y\in Y}\min_{x\in\Omega(\cdot,y)} f(x,y), \qquad
   f^{(2)} = \min_{x\in X}\max_{y\in\Omega(x,\cdot)} f(x,y)$$
 
-## Lagrangian formalism
+# Lagrangian formalism
 
 Define the Lagrangian,
 
@@ -83,7 +82,7 @@ $$f^{(1)} = \max_{\lambda \ge 0}\max_\nu\max_{y\in Y}\min_{x\in X} L(x,y,\lambda
 
 The left-hand sides of these equations contain the original maximin and minimax problems under constrains that couple the variables $x$ and $y$. The right-hand sides contain new maximin and minimax problems in terms of the Lagrangian, where the coupling constrains have disappeared.
 
-### Optimizing over $\lambda,\nu$
+## Optimizing over $\lambda,\nu$
 
 Fix $x\in X,y\in Y$. We have
 
@@ -137,7 +136,7 @@ $$\min_{\lambda \le 0}\min_\nu\min_{x\in X}\max_{y\in Y} L(x,y,\lambda,\nu)
 
 This is as far as we can get.
 
-## References
+# References
 
 1. Boyd, Stephen P., and Lieven Vandenberghe. Convex Optimization. Cambridge, UK ; New York: Cambridge University Press, 2004. Specially Chapter 5 on Lagrangian duality.
 2. [The minimax inequality and saddle-points]({{ site.baseurl }}{% post_url convexity/2018-04-24-minimax %})
