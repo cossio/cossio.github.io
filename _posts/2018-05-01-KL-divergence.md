@@ -191,7 +191,9 @@ where $\mathbf 1$ is a vector with all entries equal to 1.
 
 ### More variational definitions
 
-Taking the dual Legendre transform, we obtain additional variational definitions of the Kullback-Leibler divergence. These formulas assume that $\sum_i u_i = \sum_i v_i = 1$.
+Taking the dual Legendre transform, we obtain additional variational definitions of the Kullback-Leibler divergence. 
+
+The first formula ssumes that $\sum_iu_i=1$:
 
 $$\begin{aligned}
 \mathrm{KL}(u||v)
@@ -202,7 +204,7 @@ $$\begin{aligned}
 
 where the last equality follows from the change of variables $\xi \rightarrow \xi + 1$.
 
-Similarly
+Similarly (assuming that $\sum_iv_i=1$)
 
 $$\begin{aligned}
 \mathrm{KL}(u||v)

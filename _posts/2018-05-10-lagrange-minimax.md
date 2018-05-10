@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Constrained minimax
+title: Lagrangian formalism for minimax problems
 comments: true
 ---
-# Constrained minimax
+# Lagrangian formalism for minimax problems
 
 ## The saddle problem with constrains
 
@@ -134,61 +134,6 @@ $$\max_{\lambda \ge 0}\max_\nu\max_{y\in Y}\min_{x\in X} L(x,y,\lambda,\nu)
 
 $$\min_{\lambda \le 0}\min_\nu\min_{x\in X}\max_{y\in Y} L(x,y,\lambda,\nu)
 = \min_{x\in X}\max_{y\in Y}\min_{\lambda \le 0}\min_\nu L(x,y,\lambda,\nu)$$
-
-## All affine constrains
-
-Let $\lambda^{(i)},\nu^{(i)},x^{(i)},y^{(i)}, i=1,2$ be optimal points of the Lagrangian maximin and minimax problems, respectively,
-
-$$\max_{y\in Y}\min_{x\in\Omega(\cdot,y)} f(x,y)
-= L(x^{(1)}, y^{(1)}, \lambda^{(1)}, \nu^{(1)})$$
-
-$$\min_{x\in X}\max_{y\in\Omega(x,\cdot)} f(x,y)
-= L(x^{(2)}, y^{(2)}, \lambda^{(2)}, \nu^{(2)})$$
-
-It follows that:
-
-$$\max_{y\in Y}\min_{x\in\Omega(\cdot,y)} f(x,y)
-= \max_{y\in Y}\min_{x\in X}L(x,y, \lambda^{(1)}, \nu^{(1)})$$
-
-$$\min_{x\in X}\max_{y\in\Omega(x,\cdot)} f(x,y)
-= \min_{x\in X}\max_{y\in Y}L(x,y, \lambda^{(2)}, \nu^{(2)})$$
-
-Suppose now that both the $g_i(x,y)$ and the $h_j(x,y)$ are affine in $x,y$, for all $i,j$. Then $L(x,y,\lambda,\nu)$ is a saddle-function in $x,y$ (convex in $x$ and concave in $y$) for any fixed $\lambda,\nu$. It follows that,
-
-$$\min_{x\in X}\max_{y\in Y} L(x,y,\lambda,\nu)
-= \max_{y\in Y}\min_{x\in X} L(x,y,\lambda,\nu),
-\quad\text{for all }\lambda,\nu$$
-
-The optimal value is attained at a saddle-point $(x^*,y^*)$ of $L(x,y,\lambda,\nu)$ w.r.t. $x,y$. Note that $(x^*,y^*)$ depend on $\lambda,\nu$. A saddle-point is also a critical point, hence:
-
-$$\nabla_x L(x^*,y^*,\lambda,\nu)
-= \nabla_x f(x^*,y^*) + \sum_i\lambda_i\nabla_x g_i + \sum_j\nu_j\nabla_x h_j = 0$$
-$$\nabla_y L(x^*,y^*,\lambda,\nu)
-= \nabla_y f(x^*,y^*) + \sum_i\lambda_i\nabla_y g_i + \sum_j\nu_j\nabla_y h_j = 0$$
-
-Conversely if $(x^*,y^*)$ satisfies these stationarity conditions for a given $\lambda,\nu$, it is a saddle-point of $L(x,y,\lambda,\nu)$ w.r.t. $x,y$. Note that the gradients $\nabla g_i$ and $\nabla h_j$ are constants (because these functions are affine) and therefore the argument variables $x,y$ can be ommitted.
-
-
-
-These stationarity equations are also the conditions for $x^*,y^*$ to be a critical point of $f$ within $\Omega$.
-
-We have
-
-$$\begin{aligned}
-\min_{\lambda \le 0}\min_\nu\min_{x\in X}\max_{y\in Y} L(x,y,\lambda,\nu)
-&\le \min_\nu\min_{x\in X}\max_{y\in Y} L(x,y,0,\nu) \\
-&\le \max_\nu\min_{x\in X}\max_{y\in Y} L(x,y,0,\nu) \\
-&\le \max_{\lambda \ge 0}\max_\nu\min_{x\in X}\max_{y\in Y} L(x,y,\lambda,\nu) \\
-&=   \max_{\lambda \ge 0}\max_\nu\max_{y\in Y}\min_{x\in X} L(x,y,\lambda,\nu)
-\end{aligned}$$
-
-which implies
-
-$$\min_{x\in X}\max_{y\in\Omega(x,\cdot)} f(x,y) \le
-  \max_{y\in Y}\min_{x\in\Omega(\cdot,y)} f(x,y)$$
-
-$$\min_{x\in X}\max_{y\in Y}\min_{\lambda \le 0}\min_\nu L(x,y,\lambda,\nu)
-$$
 
 ## References
 
