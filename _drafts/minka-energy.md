@@ -109,7 +109,6 @@ $$\min_{\hat p_i}\max_q \mathcal J (\hat p, q)
 
 subject to the constrains above on $\hat p,q$.
 
-
 ## Lagrangian formalism
 
 Define the Lagrangian,
@@ -129,7 +128,6 @@ The distributions $\hat p^*,q^*$ solve the minimax problem stated above, if and 
 $$\frac{\partial\mathcal L}{\partial \hat p} = 0
 \quad \text{and} \quad
 \frac{\partial \mathcal L}{\partial q} = 0$$
-
 
 ## References
 

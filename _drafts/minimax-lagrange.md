@@ -193,4 +193,4 @@ $$
 ## References
 
 1. Boyd, Stephen P., and Lieven Vandenberghe. Convex Optimization. Cambridge, UK ; New York: Cambridge University Press, 2004. Specially Chapter 5 on Lagrangian duality.
-2. [The minimax inequality and saddle-points]({{ site.baseurl }}{% post_url /convex-analysis/2018-04-24-minimax.md %})
+2. [The minimax inequality and saddle-points]({{ site.baseurl }}{% post_url 2018-04-24-minimax %})

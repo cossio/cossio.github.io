@@ -80,7 +80,6 @@ $$f^{(1)} = \max_{\lambda \ge 0}\max_\nu\max_{y\in Y}\min_{x\in X} L(x,y,\lambda
 
 The left-hand sides of these equations contain the original maximin and minimax problems under constrains that couple the variables $x$ and $y$. The right-hand sides contain new maximin and minimax problems in terms of the Lagrangian, where the coupling constrains have disappeared.
 
-
 ### Optimizing over $\lambda,\nu$
 
 Fix $x\in X,y\in Y$. We have
@@ -138,4 +137,4 @@ This is as far as we can get.
 ## References
 
 1. Boyd, Stephen P., and Lieven Vandenberghe. Convex Optimization. Cambridge, UK ; New York: Cambridge University Press, 2004. Specially Chapter 5 on Lagrangian duality.
-2. [The minimax inequality and saddle-points]({{ site.baseurl }}{% post_url /convex-analysis/2018-04-24-minimax.md %})
+2. [The minimax inequality and saddle-points]({{ site.baseurl }}{% post_url 2018-04-24-minimax %})
