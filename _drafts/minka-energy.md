@@ -134,5 +134,5 @@ $$\frac{\partial\mathcal L}{\partial \hat p} = 0
 1. Thomas P. Minka, “The EP Energy Function and Minimization Schemes” (Technical report, 2001) ([link](https://tminka.github.io/papers/ep/minka-ep-energy.pdf)).
 2. Minka, Thomas P. “Expectation Propagation for Approximate Bayesian Inference.” In Proceedings of the Seventeenth Conference on Uncertainty in Artificial Intelligence, 362–369. UAI’01. San Francisco, CA, USA: Morgan Kaufmann Publishers Inc., 2001. ([link](http://dl.acm.org/citation.cfm?id=2074022.2074067)).
 3. Žaković, Stanislav, Costas Pantelides, and Berc Rustem. “An Interior Point Algorithm for Computing Saddle Points of Constrained Continuous Minimax.” Annals of Operations Research 99, no. 1–4 (December 1, 2000): 59–77. ([link](https://doi.org/10.1023/A:1019284715657)).
-4. [Log-sum-exp]({% post_url 2018-04-20-log-sum-exp %})
-5. [Log-sum-exp]({% post_url 2018-05-01-KL-divergence %})
+4. [Log-sum-exp]({% post_url convexity/2018-04-20-log-sum-exp %})
+5. [Log-sum-exp]({% post_url convexity/2018-05-01-KL-divergence %})

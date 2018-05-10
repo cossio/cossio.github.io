@@ -140,4 +140,4 @@ This is as far as we can get.
 ## References
 
 1. Boyd, Stephen P., and Lieven Vandenberghe. Convex Optimization. Cambridge, UK ; New York: Cambridge University Press, 2004. Specially Chapter 5 on Lagrangian duality.
-2. [The minimax inequality and saddle-points]({{ site.baseurl }}{% post_url 2018-04-24-minimax %})
+2. [The minimax inequality and saddle-points]({{ site.baseurl }}{% post_url convexity/2018-04-24-minimax %})
