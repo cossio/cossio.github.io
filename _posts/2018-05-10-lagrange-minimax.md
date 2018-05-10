@@ -5,8 +5,6 @@ comments: true
 ---
 # Lagrangian formalism for minimax problems
 
-## The saddle problem with constrains
-
 Let $f:X\times Y\rightarrow\mathbb R$ be a saddle-function (convex in $x$, concave in $y$), where $X\in\mathbb R^n$ and $Y\in\mathbb R^m$ are convex sets. We consider a restricted domain $\Omega \subset X\times Y$ defined by the constrains
 
 $$g_i(x,y) \le 0, \quad i= 1,\dots,p$$
@@ -134,6 +132,8 @@ $$\max_{\lambda \ge 0}\max_\nu\max_{y\in Y}\min_{x\in X} L(x,y,\lambda,\nu)
 
 $$\min_{\lambda \le 0}\min_\nu\min_{x\in X}\max_{y\in Y} L(x,y,\lambda,\nu)
 = \min_{x\in X}\max_{y\in Y}\min_{\lambda \le 0}\min_\nu L(x,y,\lambda,\nu)$$
+
+This is as far as we can get.
 
 ## References
 
