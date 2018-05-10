@@ -24,8 +24,11 @@ With this notation, the minimax and maximin problems can be written as:
 $$\min_{x\in X}\max_{y\in\Omega(x,\cdot)} (f(x) - g(y)), \quad
   \max_{y\in Y}\min_{x\in\Omega(\cdot,y)} (f(x) - g(y))$$
 
-$$\min_{x\in X} \left(f(x) - \max_{y\in\Omega(x,\cdot)}g(y)\right), \quad
-  \max_{y\in Y} \left(\min_{x\in\Omega(\cdot,y)}f(x) - g(y)\right)$$
+## Well-posedness
+
+Here we show that the problem is well posed. Let $x^\ast\in X,y^\ast\in Y$ be minimizers of $f,g$,
+
+$$\min_{x\in X} f(x) = g(x^\ast),\qquad\min_{y\in Y} g(y) = g(y^\ast)$$
 
 ## Lagrangian formalism
 
