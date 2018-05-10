@@ -8,6 +8,7 @@ comments: true
 Let $f:X\times Y\rightarrow\mathbb R$ be a saddle-function (convex in $x$, concave in $y$), where $X\in\mathbb R^n$ and $Y\in\mathbb R^m$ are convex sets. We consider a restricted domain $\Omega \subset X\times Y$ defined by the constrains
 
 $$g_i(x,y) \le 0, \quad i= 1,\dots,p$$
+
 $$h_j(x,y) = 0, \quad j= 1,\dots,q$$
 
 where the functions $g_i:X\times Y\rightarrow\mathbb R$ are convex in both arguments, and the functions $h_j:X\times Y\rightarrow\mathbb R$ are affine. Then $\Omega$ is a convex set. Furthermore we assume that the functions $f,g_i,h_j$ are all differentiable.
@@ -15,6 +16,7 @@ where the functions $g_i:X\times Y\rightarrow\mathbb R$ are convex in both argum
 The sets $\Omega(x,\cdot)\subset Y$ and $\Omega(\cdot,y)\subset X$ defined by
 
 $$\Omega(x,\cdot)=\{y \in Y : (x,y) \in \Omega\},\quad x\in X$$
+
 $$\Omega(\cdot,y)=\{x \in X : (x,y) \in \Omega\},\quad y\in Y$$
 
 are also convex.
@@ -55,6 +57,7 @@ Since these inequalities hold for all $(x,y)\in\Omega$, it follows that:
 Provided certain regularity conditions are met, we can assume that strong duality holds:
 
 $$\min_{x\in\Omega(\cdot,y)} f(x,y) = \max_{\lambda \ge 0} \max_\nu G(y,\lambda,\nu)$$
+
 $$\max_{y\in\Omega(x,\cdot)} f(x,y) = \min_{\lambda \le 0} \min_\nu H(x,\lambda,\nu)$$
 
 For example, since $f(x,y)$ is convex in $x$ and concave in $y$, the $g_i(x,y)$ are convex in both arguments, and the $h_j(x,y)$ are affine, the problems
