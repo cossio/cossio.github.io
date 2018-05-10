@@ -26,13 +26,21 @@ $$\min_{x\in X}\max_{y\in\Omega(x,\cdot)} (f(x) - g(y)), \quad
 
 ## Well-posedness
 
-Here we show that the problem is well posed. Let $x^\ast\in X,y^\ast\in Y$ be minimizers of $f,g$,
+Here we show that the problem is well posed. Let $x^{(i)}\in X,y^{(i)}\in Y,i=1,2$ be extremizers of $f$ and $g$,
 
-$$\min_{x\in X} f(x) = g(x^\ast),\qquad\min_{y\in Y} g(y) = g(y^\ast)$$
+$$\min_{x\in X} f(x) = f(x^{(1)}),\qquad \max_{x\in X} f(x) = f(x^{(2)})$$
 
-Then
+$$\min_{y\in Y} g(y) = g(y^{(1)}),\qquad \max_{y\in Y} g(y) = g(y^{(2)})$$
 
-$$\max_{y\in\Omega(x,\cdot)} (f(x) - g(y)) \le f(x) - g(y^\ast)$$
+Since $X,Y$ are compact and $f,g$ continuous, $x^i,y^i,i=1,2$ are guaranteed to exist. It follows that,
+
+$$\min_{x\in X}\max_{y\in\Omega(x,\cdot)} (f(x) - g(y))
+\ge \min_{x\in X} (f(x) - g(y^{(2)})) = f(x^{(1)}) - g(y^{(2)})$$
+
+$$\max_{y\in Y}\min_{x\in\Omega(\cdot,y)} (f(x) - g(y))
+\le \max_{y\in Y} (f(x^{(2)}) - g(y)) = f(x^{(2)}) - g(y^{(1)})$$
+
+Therefore the outer extremizations are bounded.
 
 ## Lagrangian formalism
 
