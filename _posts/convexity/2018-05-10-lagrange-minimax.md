@@ -22,7 +22,7 @@ are also convex.
 
 In this note we investigate the minimax and maximin problems,
 
-$$f^{(1)} = \max_{y\in Y}\min_{x\in\Omega(\cdot,y)} f(x,y), \qquad
+$$f^{(1)} = \max_{y\in Y}\min_{x\in\Omega(\cdot,y)} f(x,y),\qquad
   f^{(2)} = \min_{x\in X}\max_{y\in\Omega(x,\cdot)} f(x,y)$$
 
 # Lagrangian formalism
@@ -55,9 +55,9 @@ Since these inequalities hold for all $(x,y)\in\Omega$, it follows that:
 
 Provided certain regularity conditions are met, we can assume that strong duality holds:
 
-$$\min_{x\in\Omega(\cdot,y)} f(x,y) = \max_{\lambda \ge 0} \max_\nu G(y,\lambda,\nu)$$
+$$\min_{x\in\Omega(\cdot,y)} f(x,y) = \max_{\lambda \ge 0}\max_\nu G(y,\lambda,\nu)$$
 
-$$\max_{y\in\Omega(x,\cdot)} f(x,y) = \min_{\lambda \le 0} \min_\nu H(x,\lambda,\nu)$$
+$$\max_{y\in\Omega(x,\cdot)} f(x,y) = \min_{\lambda \le 0}\min_\nu H(x,\lambda,\nu)$$
 
 For example, since $f(x,y)$ is convex in $x$ and concave in $y$, the $g_i(x,y)$ are convex in both arguments, and the $h_j(x,y)$ are affine, the problems
 
@@ -80,7 +80,9 @@ Since $\max$ always commutes with $\max$ and $\min$ with $\min$, we can reorder 
 $$f^{(1)} = \max_{\lambda \ge 0}\max_\nu\max_{y\in Y}\min_{x\in X} L(x,y,\lambda,\nu),\quad
   f^{(2)} = \min_{\lambda \le 0}\min_\nu\min_{x\in X}\max_{y\in Y} L(x,y,\lambda,\nu).$$
 
-The left-hand sides of these equations contain the original maximin and minimax problems under constrains that couple the variables $x$ and $y$. The right-hand sides contain new maximin and minimax problems in terms of the Lagrangian, where the coupling constrains have disappeared.
+Thus we have transformed the original maximin/minimax problems into equivalent maximin/minimax problems for the Lagrangian. Notably, in the original problem in $f$,we had constrains copuling both variables $x,y$. In the Lagrangian version, there are no constrains coupling these variables.
+
+Therefore, we have shown that a minimax (maximin) problem in a saddle-function with convex constrains coupling both variables is equivalent to another minimax (maximin) problem where the coupling constrains are gone. However note that $L$ is no longer a saddle-function. So losing the coupling constrains comes at a cost.
 
 ## Optimizing over $\lambda,\nu$
 
@@ -140,3 +142,4 @@ This is as far as we can get.
 
 1. Boyd, Stephen P., and Lieven Vandenberghe. Convex Optimization. Cambridge, UK ; New York: Cambridge University Press, 2004. Specially Chapter 5 on Lagrangian duality.
 2. [The minimax inequality and saddle-points]({{ site.baseurl }}{% post_url convexity/2018-04-24-minimax %})
+3. Shimizu, K., and E. Aiyoshi. “Necessary Conditions for Min-Max Problems and Algorithms by a Relaxation Procedure.” IEEE Transactions on Automatic Control 25, no. 1 (February 1980): 62–66. [Link](https://doi.org/10.1109/TAC.1980.1102226). _Similarly to what I did here, this paper shows that the minimax problem with coupling constrains (subject to some convexity requirements) is equivalent to a Lagrangian minimax without coupling constrains. It is the only paper that I have found that considers the minimax problem with constrains coupling both variables._
