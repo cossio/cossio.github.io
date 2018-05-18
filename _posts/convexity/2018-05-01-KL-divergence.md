@@ -143,8 +143,7 @@ $$L_1(u,v,\lambda) = \sum_i \xi_i u_i - \sum_i u_i \ln(u_i/v_i) + \lambda \sum_i
 
 where $\lambda$ is the Lagrangian multiplier associated to the normalization constrain. Differentiating $L_1$ w.r.t. $u_i$ gives the stationarity condition
 
-$$u_i = v_i \mathrm e^{\xi_i + \lambda - 1}
-\quad \text{ where } \quad
+$$u_i = v_i \mathrm e^{\xi_i + \lambda - 1},\qquad
 \lambda = -\ln \sum_i v_i \mathrm e^{\xi_i - 1}$$
 
 where the value of $\lambda$ follows from the normalization of $u_i$. Substituting into $\mathrm{KL}^*(\xi || v)$ we obtain,

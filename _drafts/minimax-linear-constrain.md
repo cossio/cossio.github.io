@@ -11,9 +11,9 @@ $$f^{(1)} = \min_{x\in X}\max_{y\in Y} (f(x) - g(y)), \qquad
 
 subject to the constrains,
 
-$$A(x-y) = 0,\quad x,y\ge 0, \quad \sum_i x_i = \sum_i y_i = 1$$
+$$A(x-y) = 0$$
 
-where $A\in\mathbb R^{m\times n}$ is a matrix. We say that $(x,y)\in\Omega$ (or that $(x,y)$ is feasible) if it satisfies the above constrains, and $\Omega$ is called the set of feasible points. We also define the sets obtained from $\Omega$ by fixing one of the coordinates $x$ or $y$,
+where $A\in\mathbb R^{m\times n}$ is a matrix. We say that $(x,y)\in\Omega$ (or that $(x,y)$ is feasible) if $x\in X,y\in Y$ and $A(x-y)=0$. $\Omega$ is called the set of feasible points. We also define the sets obtained from $\Omega$ by fixing one of the coordinates $x$ or $y$,
 
 $$\Omega(x,\cdot) = \{y\in Y|(x,y)\in\Omega\}, \quad
   \Omega(\cdot,y) = \{x\in X|(x,y)\in\Omega\}.$$
@@ -43,110 +43,105 @@ Therefore the outer extremizations are bounded.
 
 # Lagrangian formalism
 
-Define the Lagrangian,
+Define the Lagrangian
 
-$$\begin{aligned}L(x,y,\lambda,\alpha,\beta,\gamma,\delta)
-&= f(x)-g(y) + \lambda^T A(x-y) \\
-&+ \alpha^T x - \beta^T y + \gamma(\bm1^Tx-1) - \delta(\bm1^Tx-1)
-\end{aligned}$$
+$$L(x,y,\lambda)=f(x)-g(y)+\lambda^T A(x-y)$$
 
-where $\bm1$ is the vector with all components equal to 1. Since $\sum_i x_i=\sum_iy_i=1$ and $\sum_iA_{ki}(x_i-y_i)=0$ for all $(x,y)\in\Omega$, it follows that:
+and the Lagrange dual functions
 
-* If $\alpha_i\ge0\ge\beta_i$ for all $i$, then $L(x,y,\lambda,\alpha,\beta,\gamma,\delta) \ge f(x)-g(y)$.
-* If $\alpha_i\le0\le\beta_i$ for all $i$, then $L(x,y,\lambda,\alpha,\beta,\gamma,\delta) \le f(x)-g(y)$.
+$$G(y,\lambda)=\min_{x\in X}L(x,y,\lambda),\qquad
+  H(x,\lambda)=\max_{y\in Y}L(x,y,\lambda)$$
 
-Now define the Lagrangian dual functions,
+Since $A(x-y)=0$ for $(x,y)\in\Omega$, it follows that
 
-$$G(x,\lambda,\alpha,\beta,\gamma,\delta)
-= \max_{y\in Y} L(x,y,\lambda,\alpha,\beta,\gamma,\delta)$$
+$$G(y,\lambda)\le L(x,y,\lambda)=f(x)-g(y)\le H(x,\lambda)
+\qquad\forall(x,y)\in \Omega$$
 
-$$H(y,\lambda,\alpha,\beta,\gamma,\delta)
-= \min_{x\in X} L(x,y,\lambda,\alpha,\beta,\gamma,\delta)$$
+Since these inequalities hold for all $(x,y)\in\Omega$ and for all $\lambda$, it follows that
 
-Again, suppose that $(x,y)\in\Omega$. Then,
+$$\max_\lambda G(y,\lambda)\le\min_{x\in\Omega(\cdot,y)}
+(f(x)-g(y)), \qquad\forall y\in Y$$
 
-* If $\alpha\ge0\ge\beta$ for all $i$, then $G(x,\lambda,\alpha,\beta,\gamma,\delta) \ge L(x,y,\lambda,\alpha,\beta,\gamma,\delta) \ge f(x)-g(y)$.
-* If $\alpha\le0\le\beta$ for all $i$, then $H(y,\lambda,\alpha,\beta,\gamma,\delta) \le L(x,y,\lambda,\alpha,\beta,\gamma,\delta) \le f(x)-g(y)$.
+$$\min_\lambda H(x,\lambda)\ge\max_{y\in\Omega(x,\cdot)}
+(f(x)-g(y)), \qquad\forall x\in X$$
 
-Since these inequalities hold for all $(x,y)\in\Omega$, it follows that,
+If Lagrangian duality holds, we obtain equality signs here instead of inequalities.
 
-* If $\alpha_i\ge0\ge\beta_i$ for all $i$, then $G(x,\lambda,\alpha,\beta,\gamma,\delta) \ge \max_{y\in\Omega(x,\cdot)}(f(x)-g(y))$.
-* If $\alpha_i\le0\le\beta_i$ for all $i$, then $H(y,\lambda,\alpha,\beta,\gamma,\delta) \le \min_{x\in\Omega(\cdot,y)}(f(x)-g(y))$.
+$$\max_\lambda\max_{y\in Y}\min_{x\in X}L(x,y,\lambda)
+\le \max_{y\in Y}\min_{x\in\Omega(\cdot,y)}(f(x)-g(y))$$
 
-Provided some mild regularity conditions are satisfied, we can assume that strong duality holds:
+$$\min_\lambda\min_{x\in X}\max_{y\in Y}L(x,y,\lambda)\ge\max_{y\in\Omega(x,\cdot)}
+(f(x)-g(y))$$
 
-$$\min_{\lambda,\gamma,\delta}\min_{\alpha\ge0}\min_{\beta\le0}
-G(x,\lambda,\alpha,\beta,\gamma,\delta) = \max_{y\in\Omega(x,\cdot)}(f(x)-g(y)),
-\quad \forall x\in X$$
+Since the first inequality holds for all $\lambda,y$ and the second for all $\lambda,x$, it follows that
 
-$$\max_{\lambda,\gamma,\delta}\max_{\alpha\le0}\max_{\beta\ge0}
-H(y,\lambda,\alpha,\beta,\gamma,\delta) = \min_{x\in\Omega(\cdot,y)}(f(x)-g(y)),
-\quad \forall y\in Y$$
+$$\max_\lambda\max_{y\in Y}\min_{x\in X}L(x,y,\lambda)\le f(x)-g(y)$$
 
-It follows that
+$$\min_\lambda\min_{x\in X}\max_{y\in Y}L(x,y,\lambda)\ge f(x)-g(y)$$
 
-$$f^{(1)} = \min_{x\in X}
-\min_{\lambda,\gamma,\delta}\min_{\alpha\ge0}\min_{\beta\le0}
-G(x,\lambda,\alpha,\beta,\gamma,\delta)$$
 
-$$f^{(2)} = \max_{y\in Y}
-\max_{\lambda,\gamma,\delta}\max_{\alpha\le0}\max_{\beta\ge0}
-H(y,\lambda,\alpha,\beta,\gamma,\delta)$$
 
-Substituting the definitions of the Lagrange dual functions and reordering the optimizations,
+Provided $x\in X,y\in Y$, it is easy to see that
 
-$$f^{(1)} = \min_{\lambda,\gamma,\delta}\min_{\alpha\ge0}\min_{\beta\le0}
-\min_{x\in X}\max_{y\in Y} L(x,y,\lambda,\alpha,\beta,\gamma,\delta)$$
+$$\min_{\lambda}L(x,y,\lambda)
+= \begin{cases}
+  f(x) - g(y) & (x,y)\in\Omega \\
+  -\infty     & (x,y)\notin\Omega
+\end{cases}$$
 
-$$f^{(2)} = \max_{\lambda,\gamma,\delta}\max_{\alpha\le0}\max_{\beta\ge0}
-\max_{y\in Y}\min_{x\in X} L(x,y,\lambda,\alpha,\beta,\gamma,\delta)$$
+$$\max_{\lambda}L(x,y,\lambda)
+= \begin{cases}
+  f(x) - g(y) & (x,y)\in\Omega \\
+  \infty     & (x,y)\notin\Omega
+\end{cases}$$
 
-# Legendre transforms of $f$ and $g$
+Therefore,
 
+$$f^{(1)} = \min_{x\in X}\max_{y\in Y}
+\min_{\lambda} L(x,y,\lambda,\alpha,\beta)$$
+
+$$f^{(2)} = \max_{y\in Y}\min_{x\in X}
+\max_{\lambda} L(x,y,\lambda,\alpha,\beta)$$
+
+$L$ is affine in $\lambda$ for fixed $x,y$, convex in $x$ for fixed $y,\lambda$, and concave in $y$ for fixed $x,\lambda$. Therefore, assuming that the optimum lies in the interior of the domain, it is possible to reorder some of these Lagrangian optimizations to obtain,
+
+$$f^{(1)} = \min_{\lambda}\min_{x\in X}\max_{y\in Y}L(x,y,\lambda,\alpha,\beta)$$
+
+$$f^{(2)} = \max_{\lambda}\max_{y\in Y}\min_{x\in X}L(x,y,\lambda,\alpha,\beta)$$
+
+Therefore Lagrangian duality holds for this problem (see also the book of Bertsekas 1999, Proposition 3.3.7). 
+
+The Lagrangian is _additively separable_ in $x,y$, _i.e._, it is a sum of terms none of which depends on both $x$ and $y$. Defining $h(x,\lambda) = \lambda^T A x$, it follows that:
+
+$$L(x,y,\lambda,\alpha,\beta)=f(x)-g(y)+h(x,\lambda)-h(y,\lambda)$$
+ 
 Since the constrains are linear, the solution simplifies by use of the Legendre transforms of $f,g$:
 
 $$\hat f(\xi) = \max_{x\in X}(\xi^T x-f(x)),\qquad
   \hat g(\eta)= \max_{y\in Y}(\eta^Ty-g(y))$$
 
-The Lagrangian can be written as,
-
-$$L(x,y,\lambda,\alpha,\beta,\gamma,\delta) = f(x)-g(y)
-+h(x,\lambda,\alpha,\gamma) - h(y,\lambda,\beta,\delta)$$
-
-where,
-
-$$h(x,\lambda,\alpha,\gamma) = \lambda^T A x + \alpha ^T x + \gamma(\bm1^Tx-1)$$
-
 It follows that:
 
-$$\min_{x\in X} (f(x) + h(x,\lambda,\alpha,\gamma))
-=-\hat f(-A^T\lambda-\alpha-\gamma\bm1) - \gamma$$
+$$\min_{x\in X} (f(x) + h(x,\lambda)) = -\hat f(-A^T\lambda)$$
 
-$$\min_{y\in Y} (g(y) + h(y,\lambda,\beta,\delta))
-=-\hat g(-A^T\lambda-\beta-\delta\bm1) - \delta$$
+$$\min_{y\in Y} (g(y) + h(y,\lambda)) = -\hat g(-A^T\lambda)$$
 
-where $\hat f,\hat g$ are the Legendre transforms of $f,g$. Then, for fixed Lagrange multipliers, $L$ satisfies the minimax equality,
+Then, for fixed $\lambda$, $L$ satisfies the minimax equality,
 
 $$\begin{aligned}
-\min_{x\in X}\max_{y\in Y} L(x,y,\lambda,\alpha,\beta,\gamma,\delta)
-= \max_{y\in Y}\min_{x\in X} L(x,y,\lambda,\alpha,\beta,\gamma,\delta) \\
-=\min_{x\in X} (f(x) + h(x,\lambda,\alpha,\gamma))
--\min_{y\in Y} (g(y) + h(y,\lambda,\beta,\delta)) \\
-=\hat g(-A^T\lambda-\beta-\delta\bm1)  + \delta
--\hat f(-A^T\lambda-\alpha-\gamma\bm1) - \gamma
+\min_{x\in X}\max_{y\in Y} L(x,y,\lambda)
+&= \max_{y\in Y}\min_{x\in X} L(x,y,\lambda) \\
+&= \min_{x\in X} (f(x) + h(x,\lambda))-\min_{y\in Y} (g(y) + h(y,\lambda)) \\
+&= \hat g(-A^T\lambda) - \hat f(-A^T\lambda)
 \end{aligned}$$
 
 Therefore,
 
-$$f^{(1)} = \min_{\lambda,\gamma,\delta}\min_{\alpha\ge0}\min_{\beta\le0}
-(\hat g(-A^T\lambda-\beta-\delta\bm1)  + \delta
--\hat f(-A^T\lambda-\alpha-\gamma\bm1) - \gamma)$$
+$$f^{(1)} = \min_{\lambda} (\hat g(-A^T\lambda) - \hat f(-A^T\lambda))$$
 
-$$f^{(2)} = \max_{\lambda,\gamma,\delta}\max_{\alpha\le0}\max_{\beta\ge0}
-(\hat g(-A^T\lambda-\beta-\delta\bm1)  + \delta
--\hat f(-A^T\lambda-\alpha-\gamma\bm1) - \gamma)$$
+$$f^{(2)} = \max_{\lambda} (\hat g(-A^T\lambda) - \hat f(-A^T\lambda))$$
 
-## References
+# References
 
 1. A problem of this form is considered by [Minka, Thomas P. “The EP Energy Function and Minimization Schemes.” Technical report, 2001](https://tminka.github.io/papers/ep/minka-ep-energy.pdf).
-
+2. [Bertsekas1999] Bertsekas, Dimitri P. Nonlinear Programming. 2nd ed. Athena Scientific, 1999.

@@ -3,7 +3,6 @@ layout: post
 title: Log-Sum-Exp
 comments: true
 ---
-# Log-Sum-Exp
 
 **Theorem.** The function $f\left(\mathbf{x}\right)=\ln\left(\sum_{i}\mathrm{e}^{x_{i}}\right)$ is convex.
 
@@ -44,8 +43,6 @@ See also [Boyd2004] §3.2.2.
 
 **Proof.** See [Boyd2004] Example 3.14.
 
-&nbsp;
-
-## References
+# References
 
 **[Boyd2004]** Stephen P. Boyd and Lieven Vandenberghe, Convex Optimization (Cambridge, UK ; New York: Cambridge University Press, 2004).

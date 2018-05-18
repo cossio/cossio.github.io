@@ -7,7 +7,7 @@ comments: true
 
 Products and quotients of Gaussian probability densities arise in multiple applications. For example, the expectation propagation (EP) algorithm of Thomas Minka.
 
-Here I collect the formulas.
+Here I collect some useful equations.
 
 ## Univariate
 

@@ -128,7 +128,7 @@ $$f^{(1)}=\max_{\lambda \ge 0}\max_\nu\max_{y\in Y}\min_{x\in X} L(x,y,\lambda,\
 , \quad
   f^{(2)}=\min_{\lambda \le 0}\min_\nu\min_{x\in X}\max_{y\in Y} L(x,y,\lambda,\nu)$$
 
-Comparing this to the previous Lagrangian optimizations derived for $f^{(i)},i=1,2$, we obtain the following equalities,
+Ntoe that these equalities do not depend on convexity assumptions or constrain qualifications. Comparing this to the previous Lagrangian optimizations derived for $f^{(i)},i=1,2$ (which do require convexity and constrain qualifications), we obtain the following equalities,
 
 $$\max_{\lambda \ge 0}\max_\nu\max_{y\in Y}\min_{x\in X} L(x,y,\lambda,\nu)
 = \max_{y\in Y}\min_{x\in X}\max_{\lambda \ge 0}\max_\nu L(x,y,\lambda,\nu)$$
