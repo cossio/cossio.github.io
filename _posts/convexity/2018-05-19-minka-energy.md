@@ -120,8 +120,6 @@ $$\begin{aligned}
 
 Note that $\max_\lambda\min_\nu$ gives the same result as $\min_\nu\max_\lambda$, because the terms involving these variables are independent.
 
-Note that $\mathcal A(\hat p,q,\lambda,\nu)$ is convex in 
-
 Therefore,
 
 $$\min_{\hat p_i}\max_q \mathcal J (\hat p, q)
@@ -129,7 +127,7 @@ $$\min_{\hat p_i}\max_q \mathcal J (\hat p, q)
 
 subject to $\hat p,q$ being normalized probability distributions and the moment-matching constrain, while $\lambda,\nu$ are not constrained.
 
-
+**To be continued ...**
 
 ## References
 
