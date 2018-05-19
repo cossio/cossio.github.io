@@ -47,7 +47,7 @@ with given values $F_j$. In the restricted problem the distributions $\hat p_i,q
 $$\min_{\hat p_i}\mathrm{KL} (\hat p_i||t_i p),\qquad
   \min_{q}\mathrm{KL} (q||p)$$
 
-subject to $\hat p_i,q$ being normalized probability distributions and the moment constrains $\langle f_j\rangle_{\hat p_i} = \langle f_j\rangle_q = F_j$. Thus knowledge of $F_j$ uncouples the $\hat p_i,q$. If the moments of $f_j$ in the solution of the original problem are $F_j^*$, then the restricted problem yields the same solution provided we set $F_j = F_j^*$.
+subject to $\hat p_i,q$ being normalized probability distributions and the moment constrains $\langle f_j\rangle_{\hat p_i} = \langle f_j\rangle_q = F_j$. Thus knowledge of $F_j$ uncouples the $\hat p_i,q$. If the moments of $f_j$ in the solution of the original problem are $F_j^\ast$, then the restricted problem yields the same solution provided we set $F_j = F_j^\ast$.
 
 For a given $F_j$, the distributions $\hat p_i,q$ must have the forms (as follows from the standard Lagrangian method)
 
@@ -66,7 +66,7 @@ $$\min_{\hat p}\max_q \mathcal J(\hat p,q) = \min_F \mathcal J(F) < \max_F \math
 
 where the optimizations w.r.t. $\hat p,q$ are carried out subject to the constrains in Minka's paper.
 
-For example, if $t_i$ are uniform distributions, then $\hat p_i,q$ are the same for any given $F$, and $\mathcal J(F)$ reduces to $\mathrm{KL} (\hat q||p)$. The minimum is attained when $F_j=\langle f_j\rangle_p$, in which case $\mathcal J=0$. By the properties of the KL divergence, if $F_j\ne\langle f_j\rangle_p$, then $\mathcal J>0$. This example demonstrates how $\mathcal J(F)$ can depend on $F$ and therefore that the minimax and maximin problems are *not* equivalent.
+For example, if $t_i$ are uniform distributions, then $\hat p_i,q$ are the same for any given $F$, and $\mathcal J(F)$ reduces to $\mathrm{KL} (\hat q \vert\vert p)$. The minimum is attained when $F_j=\langle f_j\rangle_p$, in which case $\mathcal J=0$. By the properties of the KL divergence, if $F_j\ne\langle f_j\rangle_p$, then $\mathcal J>0$. This example demonstrates how $\mathcal J(F)$ can depend on $F$ and therefore that the minimax and maximin problems are *not* equivalent.
 
 This raises the question. *Does EP reach a pair of distributions that solve the minmax or the maxmin problem?*
 
