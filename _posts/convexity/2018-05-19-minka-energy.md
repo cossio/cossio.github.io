@@ -135,5 +135,5 @@ subject to $\hat p,q$ being normalized probability distributions and the moment-
 2. Minka, Thomas P. “Expectation Propagation for Approximate Bayesian Inference.” In Proceedings of the Seventeenth Conference on Uncertainty in Artificial Intelligence, 362–369. UAI’01. San Francisco, CA, USA: Morgan Kaufmann Publishers Inc., 2001. ([link](http://dl.acm.org/citation.cfm?id=2074022.2074067)).
 3. Žaković, Stanislav, Costas Pantelides, and Berc Rustem. “An Interior Point Algorithm for Computing Saddle Points of Constrained Continuous Minimax.” Annals of Operations Research 99, no. 1–4 (December 1, 2000): 59–77. ([link](https://doi.org/10.1023/A:1019284715657)).
 4. [Log-sum-exp]({% post_url convexity/2018-04-20-log-sum-exp %})
-5. [Log-sum-exp]({% post_url convexity/2018-05-01-KL-divergence %})
+5. [Kullback-Leibler divergence]({% post_url convexity/2018-05-01-KL-divergence %})
 6. Bertsekas, Dimitri P. Nonlinear Programming. 2nd ed. Athena Scientific, 1999.
