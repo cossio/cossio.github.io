@@ -4,7 +4,7 @@ title: Exchangeable random variables
 comments: true
 ---
 
-The similarity factor between two distributions $P_\alpha,P_\beta$ is defined as 
+The similarity factor between two distributions $P_\alpha,P_\beta$ is defined as (Ref. 1):
 
 $$\mathrm{Sim} [P_\alpha,P_\beta] = \min_\lambda \sum_\sigma P_\alpha(\sigma)^{1-\lambda}P_\beta(\sigma)^\lambda$$
 
@@ -40,3 +40,5 @@ By the Cauchy theorem, the integration over $\tau$ from $-\infty$ to $\infty$ ca
 # References
 
 1. Mora, Thierry, Aleksandra M. Walczak, William Bialek, and Curtis G. Callan. “Maximum Entropy Models for Antibody Diversity.” Proceedings of the National Academy of Sciences 107, no. 12 (March 23, 2010): 5405–10. https://doi.org/10.1073/pnas.1001705107. (Supporting Information)
+
+I have not found any other reference where this similarity measure is used.
