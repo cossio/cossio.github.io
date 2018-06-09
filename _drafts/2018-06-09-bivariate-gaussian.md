@@ -40,10 +40,15 @@ $$\begin{aligned}
 z\frac{\partial M}{\partial t_{1}} & = 
 \frac{\partial}{\partial t_{1}}\int_{a_{1}^{*}}^{b_{1}^{*}}\mathrm{d}\xi_{1}\int_{a_{2}^{*}}^{b_{2}^{*}}\mathrm{d}\xi_{2}\,\phi\left(\xi_{1},\xi_{2}\right) \\
   &=\int_{a_{1}}^{b_{1}}\mathrm{d}\xi_{1}\frac{\partial}{\partial t_{1}}\int_{a_{2}^{*}}^{b_{2}^{*}}\mathrm{d}\xi_{2}\,\phi\left(\xi_{1},\xi_{2}\right)-\int_{a_{2}}^{b_{2}}\mathrm{d}\xi_{2}\,\phi\left(b_{1},\xi_{2}\right)+\int_{a_{2}}^{b_{2}}\mathrm{d}\xi_{2}\,\phi\left(a_{1},\xi_{2}\right) \\
-  &=\rho\int_{a_{1}}^{b_{1}}\mathrm{d}\xi_{1}\,\phi\left(\xi_{1},a_{2}\right)-\rho\int_{a_{1}}^{b_{1}}\mathrm{d}\xi_{1}\phi\left(\xi_{1},b_{2}\right)-\int_{a_{2}}^{b_{2}}\mathrm{d}\xi_{2}\,\phi\left(b_{1},\xi_{2}\right)+\int_{a_{2}}^{b_{2}}\mathrm{d}\xi_{2}\,\phi\left(a_{1},\xi_{2}\right)
+  &=\rho\int_{a_1}^{b_1}\phi(\xi_1,a_2)\mathrm{d}\xi_1 - \rho\int_{a_1}^{b_1}\phi(\xi_1,b_2)\mathrm{d}\xi_1 - \int_{a_2}^{b_2}\phi(b_1,\xi_2)\mathrm{d}\xi_2 + \int_{a_2}^{b_2}\phi(a_1,\xi_2)\mathrm{d}\xi_2
 \end{aligned}$$
 
-This is equivalent to Eq. 5 in Ref. 1.
+This is equivalent to Eq. 5 in Ref. 1. The problem of computing $\left\langle y_1\right\rangle$ originally involved bidimensional integrations. Observe that now it as been reduced to the computation of one-dimensional integrations.
+
+But we still need to evaluate $z$!
+
+
+Recall that $\phi(y_1,y_2)$ depends on $\rho$ as well.
 
 # References
 
