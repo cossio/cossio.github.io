@@ -37,7 +37,7 @@ $$h_i^\prime(a) = h_i(a) + J_{ii}(a)$$
 
 $$J_{ij}^\prime(a,b) = J_{ij}(a,b)-\frac{1}{A}\sum_x J_{ij}(x,b) - \frac{1}{A}\sum_y J_{ij}(a,y) + \frac{1}{A^2}\sum_{x,y}J_{ij}(x,y)$$
 
-$$h_i^\prime(a) = h_i(a) + \frac{1}{A}\sum_{i,j}\left(\sum_x J_{ji}(x,s_i) + \sum_y J_{ij}(s_i,y)\right)$$
+$$h_i^\prime(a) = h_i(a) + \frac{1}{A}\sum_{i,j}\left(\sum_x J_{ji}(x,a) + \sum_y J_{ij}(a,y)\right)$$
 
 **Removal of average external fields.** This transformation removes the average external field on each site, making $\sum_x h_i^\prime(x) = 0$ for all $i$.
 
