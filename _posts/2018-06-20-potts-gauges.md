@@ -8,11 +8,11 @@ Consider sequences $\underline s = (s_1,s_2,\dots,s_L)$ of length $L$, where eac
 
 We define the *energy* of a sequence as:
 
-$$H(\underline s|J,h) = -\sum_{ij}J_{ij}(s_i,s_j) - \sum_i h_i(s_i)$$
+$$H(\underline s\vert J,h) = -\sum_{ij}J_{ij}(s_i,s_j) - \sum_i h_i(s_i)$$
 
 where $h_i(a)$ are called the *external fields* and $J_{ij}(a,b)$ the *coupling fields*.
 
-The fields $J,h$ and $J\prime,h\prime$ are *equivalent* if there exists a constant number $C$ such that $H(\underline s|J,h) = H(\underline s|J\prime,h\prime) + C$ for all sequences $\underline s$. This relation satisfies all the properties of an equivalence relation.
+The fields $J,h$ and $J\prime,h\prime$ are *equivalent* if there exists a constant number $C$ such that $H(\underline s\vert J,h) = H(\underline s\vert J\prime,h\prime) + C$ for all sequences $\underline s$. This relation satisfies all the properties of an equivalence relation.
 
 A transformation of the fields from $J,h$ to $J\prime,h\prime$ is a *gauge transformation* if $J,h$ is equivalent to $J\prime,h\prime$. The following transformations are gauge transformations.
 
