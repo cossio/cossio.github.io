@@ -22,7 +22,7 @@ $$J_{ij}^{\prime}(a,b) = \frac{1}{2}\left(J_{ij}(a,b) + J_{ji}(b,a)\right)$$
 
 $$h_i^\prime(a) = h_i(a)$$
 
-Note that $J^{\prime}$ becomes symmetric: $J_{ij}^\prime(a,b) = J_{ji}(b,a)$.
+Note that $J^{\prime}$ becomes symmetric: $J_{ij}^\prime(a,b) = J_{ji}^\prime(b,a)$.
 
 **Removal of self-couplings.** This gauge transformation obtains coupling fields with diagonal terms set to zero, $J_{ii}^\prime(a,b) = 0$.
 
